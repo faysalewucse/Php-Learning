@@ -9,17 +9,13 @@
 </head>
 
 <body>
-    <form action="index.php" method="post">
-        Enter Number: <input type="number" name="num"><br>
-        <input type="submit" value="Submit"><br>
-    </form>
+    <?php include "./header.html" ?>
+    <h1>This is My Main Section</h1>
+
     <?php
-    $num = $_POST['num'];
-    for ($i = 1; $i <= 10; $i++) {
-        $result = $num * $i;
-        echo "$num x $i = $result<br>";
-    }
-    ?>
+     $text = "Button";
+     include "primary_button.php"?>
+    <?php include "./footer.html" ?>
 </body>
 
 </html>
