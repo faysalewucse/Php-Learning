@@ -10,29 +10,14 @@
 
 <body>
     <form action="index.php" method="post">
-        Enter Your Grade: <input type="text" name="grade"><br>
+        Enter Number: <input type="number" name="num"><br>
         <input type="submit" value="Submit"><br>
     </form>
     <?php
-    $grade = $_POST['grade'];
-    switch ($grade) {
-        case "A":
-            echo "Great Result.";
-            break;
-        case "B":
-            echo "Good Result.";
-            break;
-        case "C":
-            echo "Medium Result.";
-            break;
-        case "D":
-            echo "Poor Result.";
-            break;
-        case "F":
-            echo "You Fail. SO Sad";
-            break;
-        default:
-            echo "Invalid Grade";
+    $num = $_POST['num'];
+    for ($i = 1; $i <= 10; $i++) {
+        $result = $num * $i;
+        echo "$num x $i = $result<br>";
     }
     ?>
 </body>
