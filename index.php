@@ -35,11 +35,28 @@
         ?>
     </form> -->
 
-    <form action="index.php" method="post">
+    <!-- <form action="index.php" method="post">
         <input type="password" name="pass"><br>
         <input type="submit" value="Submit">
     </form>
-    Password is: <?php echo $_POST["pass"]; ?><br>
+    Password is: <?php echo $_POST["pass"]; ?><br> -->
+
+    <form action="index.php" method="post">
+        Rose:<input type="checkbox" name="flowers[]" value="rose"><br>
+        Tulip:<input type="checkbox" name="flowers[]" value="tulip"><br>
+        Joba:<input type="checkbox" name="flowers[]" value="joba"><br>
+        ID:<input type="number" name="id"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <?php
+    $ID = $_POST["id"];
+    $flowers = $_POST["flowers"];
+    echo "$flowers[1] </br>";
+    $grades = array(1 => 'a+', 2 => 'b+');
+    echo count($grades);
+    echo $grades[$ID];
+    ?>
 
 </body>
 
