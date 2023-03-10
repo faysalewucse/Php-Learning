@@ -16,7 +16,7 @@
     </form>
     Sum is: <?php echo $_GET["num1"] + $_GET["num2"]; ?><br> -->
 
-    Mad Libs Game:
+    <!-- Mad Libs Game:
     <hr>
     <form action="index.php" method="get">
         Color: <input type="text" name="color"><br>
@@ -33,7 +33,13 @@
         echo "$pluralNoun Are Blue </br>";
         echo "I Love $celibrity </br>";
         ?>
+    </form> -->
+
+    <form action="index.php" method="post">
+        <input type="password" name="pass"><br>
+        <input type="submit" value="Submit">
     </form>
+    Password is: <?php echo $_POST["pass"]; ?><br>
 
 </body>
 
