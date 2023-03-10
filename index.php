@@ -10,19 +10,27 @@
 
 <body>
     <form action="index.php" method="post">
-        Length: <input type="number" name="length"><br>
-        Width: <input type="number" name="width"><br>
-        <input type="submit" value="Submit">
+        NUM1: <input type="number" step="0.001" name="num1"><br>
+        Operator: <input type="text" name="op"><br>
+        NUM2: <input type="number" name="num2"><br>
+        <input type="submit" value="Submit"><br>
     </form>
     <?php
-    $length = $_POST['length'];
-    $width = $_POST['width'];
-    function getArea($length, $width)
-    {
-        return $length * $width;
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $op = $_POST['op'];
+    echo "Result is: ";
+    if ($op == '+') {
+        echo $num1 + $num2;
+    } else if ($op == '-') {
+        echo $num1 - $num2;
+    } else if ($op == '*') {
+        echo $num1 * $num2;
+    } else if ($op == '/') {
+        echo $num1 / $num2;
+    } else {
+        echo "Invalid Operator";
     }
-    echo "The Area is:";
-    echo getArea($length, $width);
     ?>
 </body>
 
